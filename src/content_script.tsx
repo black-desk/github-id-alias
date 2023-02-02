@@ -1,9 +1,17 @@
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-  if (msg.color) {
-    console.log("Receive color = " + msg.color);
-    document.body.style.backgroundColor = msg.color;
-    sendResponse("Change color to " + msg.color);
-  } else {
-    sendResponse("Color message is none.");
-  }
-});
+chrome.storage.sync.get({ aliases: {} }, (items) => {
+        var element = document.getElementsByClassName("vcard-names")[0];
+        if (element == undefined) {
+                return
+        }
+
+        const name = element.children[1].innerHTML.trim()
+        var span = document.createElement("span")
+        span.setAttribute("class", "p-nickname vcard-username d-block")
+
+        const alias = items.aliases[name]
+        if (alias == undefined) {
+                return
+        }
+        span.innerHTML = alias
+        element.appendChild(span)
+})
