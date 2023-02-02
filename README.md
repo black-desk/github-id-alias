@@ -10,7 +10,7 @@ Such as:
 
 ``` json
 {
-  "black-desk": "==="
+        "black-desk": "some nice alias"
 }
 ```
 
