@@ -1,70 +1,19 @@
-# Chrome Extension TypeScript Starter
+# github id alias
 
-![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
+This is a simple extension show alias on github profile.
 
-Chrome Extension, TypeScript and Visual Studio Code
+In option you can set a url, for example
+<https://raw.githubusercontent.com/black-desk/github-id-alias/master/example.json>,
+from which this plugin will fetch a json which record the aliases for github id.
 
-## Prerequisites
+Such as:
 
-* [node + npm](https://nodejs.org/) (Current Version)
-
-## Option
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-## Includes the following
-
-* TypeScript
-* Webpack
-* React
-* Jest
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
-
-## Project Structure
-
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
-
-## Setup
-
-```
-npm install
+``` json
+{
+  "black-desk": "==="
+}
 ```
 
-## Import as Visual Studio Code project
+It will look like:
 
-...
-
-## Build
-
-```
-npm run build
-```
-
-## Build in watch mode
-
-### terminal
-
-```
-npm run watch
-```
-
-### Visual Studio Code
-
-Run watch mode.
-
-type `Ctrl + Shift + B`
-
-## Load extension to chrome
-
-Load `dist` directory
-
-## Test
-`npx jest` or `npm run test`
+![](./img/example.png)
